@@ -1,13 +1,26 @@
-import React from 'react'
-import './LeftColumn.css'
+import React, { useState } from 'react';
+import './LeftColumn.css';
 
-const LeftColumn = () => {
+const LeftColumn = ({ setShowProjects, setShowSketches }) => {
+    const handleProjectsClick = () => {
+        setShowProjects(true);
+        setShowSketches(false);
+    };
+
+    const handleSketchesClick = () => {
+        setShowProjects(false);
+        setShowSketches(true);
+    };
+
     return (
-        <div className="left-column">
-            <h1 className="custom-margin-top">Pim</h1>
+        <div>
+            <h1 className="name-text custom-margin-top">Gimena Motto</h1>
+            <div className="menu-text">
+                <p onClick={handleProjectsClick}>__PROYECTOS</p>
+                <p onClick={handleSketchesClick}>__BOCETOS EN P5.JS</p>
+            </div>
         </div>
     );
-}
+};
 
 export default LeftColumn;
-

@@ -5,16 +5,25 @@
     flex: 1;
     overflow: hidden;
     /* Evita el scroll en toda la sección de Portfolio */
+    background-color: #1a1a1a;
+    /* Fondo negro */
+    color: #ffffff;
+    /* Texto blanco */
+    font-family: 'Lato', sans-serif;
+    /* Texto en la fuente Lato */
+    /* Otros estilos específicos para Portfolio */
 }
 
+/* Portfolio.css */
 .left-column {
     flex: 1;
     overflow: auto;
-    /* Habilita el scroll si el contenido es más largo */
-    width: 30%;
+    width: 40%;
+    /* Establece el ancho deseado */
+    max-width: 40%;
+    /* Agrega un tamaño máximo */
     display: flex;
     justify-content: center;
-    /* Centra horizontalmente */
     position: sticky;
     top: 0;
 }
