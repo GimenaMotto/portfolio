@@ -21,3 +21,26 @@
     font-size: 1em;
 
 }
+
+.icon-container {
+    display: flex;
+}
+
+.icon {
+    margin: 15px;
+    /* Ajusta el espacio entre los iconos según sea necesario */
+    color: #ccc;
+    /* Ajusta el color de los iconos según sea necesario */
+}
+
+.menu-link {
+    color: #ccc;
+    /* Ajusta el color del texto según sea necesario */
+    cursor: pointer;
+    /* Muestra la manito al pasar el mouse */
+}
+
+.menu-link:hover {
+    text-decoration: none;
+    /* Cambia el estilo al pasar el mouse */
+}
