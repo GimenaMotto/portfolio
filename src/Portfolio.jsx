@@ -6,14 +6,15 @@ import RightColumn from './RightColumn'
 const Portfolio = () => {
     const [showProjects, setShowProjects] = useState(false);
     const [showSketches, setShowSketches] = useState(false);
+    const [showApplications, setShowApplications] = useState(false);
 
     return (
         <div className="portfolio">
             <div className="left-column">
-                <LeftColumn setShowProjects={setShowProjects} setShowSketches={setShowSketches} />
+                <LeftColumn setShowProjects={setShowProjects} setShowApplications={setShowApplications} setShowSketches={setShowSketches} />
             </div>
             <div className="right-column">
-                <RightColumn showProjects={showProjects} showSketches={showSketches} />
+                <RightColumn showProjects={showProjects} showApplications={showApplications} showSketches={showSketches} />
             </div>
         </div>
     );
