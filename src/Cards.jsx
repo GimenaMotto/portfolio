@@ -6,39 +6,50 @@ import video360 from './videos/360.mp4';
 import './Cards.css';
 
 const Cards = () => {
+
     const cardStyle = {
-        backgroundColor: '#1a1a1a',
-        color: '#ffffff',
-        border: '1px solid #333333',
+        backgroundColor: '#F5F5F5',
+        color: '#5864A1',
+        border: '1px solid rgba(88, 100, 161, 0.2)', // Ajusta el valor de opacidad según tus preferencias
         width: '40rem',
     };
 
+
     const badgeStyle = {
-        backgroundColor: '#E1F92C',
-        color: '#1a1a1a',
+        color: '#5864A1',
         padding: '0.15rem 0.3rem',
         borderRadius: '0.25rem',
         marginRight: '0.5rem',
         fontSize: '0.8rem',
+        fontWeight: 'bold', // Agregar negrita al texto
         filter: 'brightness(90%)',
+        border: '2px solid #E5746D', // Aumentar el grosor del borde
     };
+
 
 
     const [isWebButtonHovered, setIsWebButtonHovered] = useState(false);
     const [isRepoButtonHovered, setIsRepoButtonHovered] = useState(false);
 
     const webButtonStyle = {
-        backgroundColor: isWebButtonHovered ? '#A45A7D' : '#845A7D',
-        borderColor: isWebButtonHovered ? '#A45A7D' : '#845A7D',
-        color: '#ffffff',
+        backgroundColor: isWebButtonHovered ? '#E5746D' : '#C5656F',
+        borderColor: isWebButtonHovered ? '#E5746D' : '#C5656F',
+        color: '#F5F5F5',
 
     };
 
     const repoButtonStyle = {
-        backgroundColor: isRepoButtonHovered ? '#A45A7D' : '#845A7D',
-        borderColor: isRepoButtonHovered ? '#A45A7D' : '#845A7D',
-        color: '#ffffff',
+        backgroundColor: isRepoButtonHovered ? '#E5746D' : '#C5656F',
+        borderColor: isRepoButtonHovered ? '#E5746D' : '#C5656F',
+        color: '#F5F5F5',
 
+    };
+
+    const cardTitleStyle = {
+        fontSize: '1.5rem',
+        fontWeight: 'bold',
+        color: '#5864A1',
+        textShadow: '1px 0px 0px #E5746D', // Efecto de sombra en el lado derecho
     };
 
     return (
@@ -46,7 +57,7 @@ const Cards = () => {
 
 
             <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                <h5 className="text-center mb-1 mt-3">Wiki Rick and Morty</h5>
+                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Wiki Rick and Morty</h5>
                 <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }}>
                     <source src={videorick} type="video/mp4" />
                     Tu navegador no soporta el elemento de video.
@@ -92,7 +103,7 @@ const Cards = () => {
             </Card>
 
             <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                <h5 className="text-center mb-1 mt-3">Nombre de tu tercera card</h5>
+                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Nombre de tu tercera card</h5>
                 <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }}>
                     <source src={video360} type="video/mp4" />
                     Tu navegador no soporta el elemento de video.
@@ -139,7 +150,7 @@ const Cards = () => {
                 </Card.Body>
             </Card>
             <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                <h5 className="text-center mb-1 mt-3">Juego 1 poner nombre</h5>
+                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Juego 1 poner nombre</h5>
                 <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }}>
                     <source src={videorater} type="video/mp4" />
                     Tu navegador no soporta el elemento de video.
