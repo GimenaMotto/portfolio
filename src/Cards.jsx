@@ -3,27 +3,30 @@ import { Card, Button } from 'react-bootstrap';
 import videorater from './videos/rater.mp4';
 import videorick from './videos/rickandmorty.mp4';
 import video360 from './videos/360.mp4';
+import { useTheme } from './useTheme';
 import './Cards.css';
 
 const Cards = () => {
 
+    const { theme } = useTheme();
+
     const cardStyle = {
-        backgroundColor: '#F5F5F5',
-        color: '#5864A1',
-        border: '1px solid rgba(88, 100, 161, 0.2)', // Ajusta el valor de opacidad según tus preferencias
+        backgroundColor: theme === 'light' ? '#F5F5F5' : '#5864A1',
+        color: theme === 'light' ? '#5864A1' : '#F5F5F5',
+        border: theme === 'light' ? '1px solid rgba(88, 100, 161, 0.2)' : '1px solid rgba(245, 245, 245, 0.2)',
         width: '40rem',
     };
 
 
     const badgeStyle = {
-        color: '#5864A1',
+        color: theme === 'light' ? '#5864A1' : '#F5F5F5',
         padding: '0.15rem 0.3rem',
         borderRadius: '0.25rem',
         marginRight: '0.5rem',
         fontSize: '0.8rem',
-        fontWeight: 'bold', // Agregar negrita al texto
+        fontWeight: 'bold',
         filter: 'brightness(90%)',
-        border: '2px solid #E5746D', // Aumentar el grosor del borde
+        border: '2px solid #E5746D',
     };
 
 
@@ -48,7 +51,7 @@ const Cards = () => {
     const cardTitleStyle = {
         fontSize: '1.5rem',
         fontWeight: 'bold',
-        color: '#5864A1',
+        color: theme === 'light' ? '#5864A1' : '#F5F5F5',
         textShadow: '1px 0px 0px #C5656F', // Efecto de sombra en el lado derecho
     };
 
@@ -56,6 +59,9 @@ const Cards = () => {
         ...cardStyle,
         marginTop: '7rem', // Ajusta el valor según tus necesidades
     };
+
+
+
 
     return (
         <div>

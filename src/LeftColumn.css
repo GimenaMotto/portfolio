@@ -1,3 +1,4 @@
+/* LeftColumn.css */
 .custom-margin-top {
     margin-top: 200px;
     text-align: center;
@@ -23,6 +24,17 @@
     display: flex;
 }
 
+/* Estilos para el modo oscuro */
+.portfolio.dark .icon {
+    /* Ajusta los colores para el modo oscuro */
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.portfolio.dark .icon:hover {
+    /* Ajusta los colores para el modo oscuro */
+    color: rgba(255, 255, 255, 1);
+}
+
 .icon {
     margin: 15px;
     color: rgba(88, 100, 161, 0.8);
@@ -41,11 +53,15 @@
     margin-bottom: 20px;
     text-decoration: none;
     transition: transform 0.1s;
-    /* Añadida transición para suavizar el cambio de tamaño */
 }
 
 .menu-link:hover {
     text-decoration: none;
     transform: scale(1.02);
-    /* Ajusta el tamaño al hacer hover */
+}
+
+/* Estilos para el modo oscuro */
+.portfolio.dark .menu-link {
+    /* Ajusta los colores para el modo oscuro */
+    color: #F5F5F5;
 }

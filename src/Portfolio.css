@@ -4,24 +4,18 @@
     height: 100vh;
     flex: 1;
     overflow: hidden;
-    /* Evita el scroll en toda la sección de Portfolio */
     background-color: #F5F5F5;
-    /* Fondo negro */
+    /* Fondo claro en modo claro */
     color: #5864A1;
-    /* Texto blanco */
+    /* Texto oscuro en modo claro */
     font-family: 'Lato', sans-serif;
-    /* Texto en la fuente Lato */
-    /* Otros estilos específicos para Portfolio */
 }
 
-/* Portfolio.css */
 .left-column {
     flex: 1;
     overflow: auto;
     width: 40%;
-    /* Establece el ancho deseado */
     max-width: 40%;
-    /* Agrega un tamaño máximo */
     display: flex;
     justify-content: center;
     position: sticky;
@@ -31,7 +25,36 @@
 .right-column {
     flex: 1;
     overflow-y: auto;
-    /* Habilita el scroll vertical solo si es necesario */
     width: 100%;
+}
 
+/* Portfolio.css */
+.theme-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #5864A1;
+    /* Color del ícono en modo claro */
+}
+
+/* Estilos para el modo oscuro */
+.portfolio.dark .theme-button {
+    color: #F5F5F5;
+    /* Color del ícono en modo oscuro */
+}
+
+/* Estilos para el modo oscuro */
+.portfolio.dark {
+    background-color: #5864A1;
+    /* Fondo oscuro en modo oscuro */
+    color: #F5F5F5;
+    /* Texto claro en modo oscuro */
+}
+
+.theme-button.dark {
+    color: #F5F5F5;
+    /* Color del ícono en modo oscuro */
 }
