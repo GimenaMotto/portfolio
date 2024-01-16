@@ -1,9 +1,7 @@
 .custom-margin-top {
     margin-top: 200px;
     text-align: center;
-
 }
-
 
 .name-text {
     font-family: 'Lato Black', sans-serif;
@@ -11,15 +9,14 @@
     font-size: 2.2em;
     letter-spacing: 1px;
     margin-bottom: 70px;
-    /* text-shadow: 2px 0px 0px #E5746D; */
+    text-shadow: 2px 0px 0px rgba(88, 100, 161, 0.5);
+    color: rgba(198, 101, 111, 0.9);
 }
-
 
 .menu-text {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 1em;
-
 }
 
 .icon-container {
@@ -28,19 +25,27 @@
 
 .icon {
     margin: 15px;
-    /* Ajusta el espacio entre los iconos según sea necesario */
-    color: #5864A1;
-    /* Ajusta el color de los iconos según sea necesario */
+    color: rgba(88, 100, 161, 0.8);
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    color: rgba(88, 100, 161, 1);
 }
 
 .menu-link {
     color: #5864A1;
-    /* Ajusta el color del texto según sea necesario */
     cursor: pointer;
-    /* Muestra la manito al pasar el mouse */
+    font-size: 1em;
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: transform 0.1s;
+    /* Añadida transición para suavizar el cambio de tamaño */
 }
 
 .menu-link:hover {
     text-decoration: none;
-    /* Cambia el estilo al pasar el mouse */
+    transform: scale(1.02);
+    /* Ajusta el tamaño al hacer hover */
 }

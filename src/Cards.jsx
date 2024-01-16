@@ -49,14 +49,19 @@ const Cards = () => {
         fontSize: '1.5rem',
         fontWeight: 'bold',
         color: '#5864A1',
-        textShadow: '1px 0px 0px #E5746D', // Efecto de sombra en el lado derecho
+        textShadow: '1px 0px 0px #C5656F', // Efecto de sombra en el lado derecho
+    };
+
+    const firstCardStyle = {
+        ...cardStyle,
+        marginTop: '7rem', // Ajusta el valor según tus necesidades
     };
 
     return (
         <div>
 
 
-            <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
+            <Card className="mb-3 mx-auto" style={firstCardStyle}>
                 <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Wiki Rick and Morty</h5>
                 <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }}>
                     <source src={videorick} type="video/mp4" />
@@ -70,6 +75,7 @@ const Cards = () => {
                         <span style={badgeStyle}>MongoDB</span>
                         <span style={badgeStyle}>Mongoose</span>
                         <span style={badgeStyle}>ExpressJS</span>
+                        <span style={badgeStyle}>Nodemailer</span>
                     </div>
 
                     <Card.Text style={{ textAlign: 'justify' }} className="mt-2">
