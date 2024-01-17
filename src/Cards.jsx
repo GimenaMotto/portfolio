@@ -27,6 +27,7 @@ const Cards = () => {
         fontWeight: 'bold',
         filter: 'brightness(90%)',
         border: theme === 'light' ? '2px solid #E5746D' : '2px solid #C5656F',
+
     };
 
 
@@ -72,18 +73,27 @@ const Cards = () => {
                     Tu navegador no soporta el elemento de video.
                 </video>
                 <Card.Body>
-                    <div className="d-flex flex-wrap justify-content-center text-center">
+
+                    <div className="d-flex flex-wrap justify-content-center text-center" style={{ margin: '0 4.5rem' }}>
                         <span style={badgeStyle}>HTML</span>
                         <span style={badgeStyle}>CSS</span>
                         <span style={badgeStyle}>JavaScript</span>
                         <span style={badgeStyle}>MongoDB</span>
                         <span style={badgeStyle}>Mongoose</span>
                         <span style={badgeStyle}>ExpressJS</span>
-                        <span style={badgeStyle}>Nodemailer</span>
+                        <span style={{ ...badgeStyle, marginTop: '8px' }}>Nodemailer</span>
+                        <span style={{ ...badgeStyle, marginTop: '8px' }}>Cloudinary</span>
+                        <span style={{ ...badgeStyle, marginTop: '8px' }}>API Google</span>
                     </div>
 
-                    <Card.Text style={{ textAlign: 'justify' }} className="mt-2">
-                        Tu texto para la segunda card Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+                    <Card.Text className="mt-2">
+                        Wiki de la serie Rick and Morty.<br />
+                        Puedes buscar todos los personajes, episodios y locaciones.<br />
+                        Red social con sistema auth que te permite guardar en favoritos, crear eventos en los que otros usuarios pueden participar.<br />
+                        Realizada como trabajo de Bootcamp en Ironhack junto a mi compañero Iván Pereiro.<br />
+                        Trabajamos con la siguiente API: https://rickandmortyapi.com/<br />
+                        Para poder visualizar todo puedes acceder con el usuario: Pimba y contraseña: 12345 o bien registrarte.
                     </Card.Text>
                     <div className="d-flex justify-content-center">
                         <Button
@@ -99,7 +109,7 @@ const Cards = () => {
                         </Button>
                         <Button
                             className="custom-btn"
-                            href="URL_REPO_2"
+                            href="https://github.com/ivanpereariza/backend-project"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ ...repoButtonStyle }}
@@ -119,15 +129,16 @@ const Cards = () => {
                     Tu navegador no soporta el elemento de video.
                 </video>
                 <Card.Body>
-                    <div className="d-flex flex-wrap justify-content-center text-center">
+
+                    <div className="d-flex flex-wrap justify-content-center text-center" style={{ margin: '0 4.5rem' }}>
                         <span style={badgeStyle}>MongoDB</span>
                         <span style={badgeStyle}>ExpressJS</span>
                         <span style={badgeStyle}>ReactJS</span>
                         <span style={badgeStyle}>NodeJS</span>
                         <span style={badgeStyle}>HTML</span>
                         <span style={badgeStyle}>CSS</span>
-                        <span style={badgeStyle}>JavaScript</span>
-                        <span style={badgeStyle}>Bootstrap</span>
+                        <span style={{ ...badgeStyle, marginTop: '8px' }}>JavaScript</span>
+                        <span style={{ ...badgeStyle, marginTop: '8px' }}>Bootstrap</span>
                     </div>
 
                     <Card.Text style={{ textAlign: 'justify' }} className="mt-2">
@@ -167,7 +178,7 @@ const Cards = () => {
                     Tu navegador no soporta el elemento de video.
                 </video>
                 <Card.Body>
-                    <div className="d-flex flex-wrap justify-content-center text-center">
+                    <div className="d-flex flex-wrap justify-content-center text-center" style={{ margin: '0 4.5rem' }}>
                         <span style={badgeStyle}>HTML</span>
                         <span style={badgeStyle}>CSS</span>
                         <span style={badgeStyle}>JavaScript</span>
@@ -212,11 +223,13 @@ const Cards = () => {
                     Tu navegador no soporta el elemento de video.
                 </video>
                 <Card.Body>
-                    <div className="d-flex flex-wrap justify-content-center text-center">
+                    <div className="d-flex flex-wrap justify-content-center text-center" style={{ margin: '0 4.5rem' }}>
+                        <span style={badgeStyle}>React</span>
+                        <span style={badgeStyle}>Material UI</span>
                         <span style={badgeStyle}>HTML</span>
                         <span style={badgeStyle}>CSS</span>
                         <span style={badgeStyle}>JavaScript</span>
-                        <span style={badgeStyle}>CanvasJS</span>
+
                     </div>
 
                     <Card.Text style={{ textAlign: 'justify' }} className="mt-2">
@@ -226,7 +239,7 @@ const Cards = () => {
                     <div className="d-flex justify-content-center">
                         <Button
                             className="me-4 custom-btn"
-                            href="https://gimenamotto.github.io/RATER_GAME_FINAL/"
+                            href=""
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ ...webButtonStyle }}
@@ -237,7 +250,7 @@ const Cards = () => {
                         </Button>
                         <Button
                             className="custom-btn"
-                            href="https://github.com/GimenaMotto/RATER_GAME_FINAL"
+                            href="https://github.com/GimenaMotto/SilvinaNicotra"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ ...repoButtonStyle }}
