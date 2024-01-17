@@ -2,28 +2,31 @@ import React, { useState } from 'react';
 import { Card, Button, Carousel } from 'react-bootstrap';
 import facturación from './images/facturación.jpg';
 import certificados from './images/certificados.jpg';
+import { useTheme } from './useTheme';
 import './Cards2.css';
 
 
 const Cards2 = () => {
 
+    const { theme } = useTheme();
+
     const cardStyle = {
-        backgroundColor: '#F5F5F5',
-        color: '#5864A1',
-        border: '1px solid rgba(88, 100, 161, 0.2)',
+        backgroundColor: theme === 'light' ? '#F5F5F5' : '#5864A1',
+        color: theme === 'light' ? '#5864A1' : '#F5F5F5',
+        border: theme === 'light' ? '1px solid rgba(88, 100, 161, 0.2)' : '1px solid rgba(245, 245, 245, 0.2)',
         width: '40rem',
     };
 
 
     const badgeStyle = {
-        color: '#5864A1',
+        color: theme === 'light' ? '#5864A1' : '#F5F5F5',
         padding: '0.15rem 0.3rem',
         borderRadius: '0.25rem',
         marginRight: '0.5rem',
         fontSize: '0.8rem',
         fontWeight: 'bold',
         filter: 'brightness(90%)',
-        border: '2px solid #E5746D',
+        border: theme === 'light' ? '2px solid #E5746D' : '2px solid #C5656F',
     };
 
 
@@ -32,37 +35,35 @@ const Cards2 = () => {
     const [isRepoButtonHovered, setIsRepoButtonHovered] = useState(false);
 
     const webButtonStyle = {
-        backgroundColor: isWebButtonHovered ? '#E5746D' : '#C5656F',
-        borderColor: isWebButtonHovered ? '#E5746D' : '#C5656F',
+        backgroundColor: isWebButtonHovered ? (theme === 'light' ? '#E5746D' : '#C5656F') : (theme === 'light' ? '#C5656F' : '#E5746D'),
+        borderColor: isWebButtonHovered ? (theme === 'light' ? '#E5746D' : '#C5656F') : (theme === 'light' ? '#C5656F' : '#E5746D'),
         color: '#F5F5F5',
-
     };
 
     const repoButtonStyle = {
-        backgroundColor: isRepoButtonHovered ? '#E5746D' : '#C5656F',
-        borderColor: isRepoButtonHovered ? '#E5746D' : '#C5656F',
+        backgroundColor: isRepoButtonHovered ? (theme === 'light' ? '#E5746D' : '#C5656F') : (theme === 'light' ? '#C5656F' : '#E5746D'),
+        borderColor: isRepoButtonHovered ? (theme === 'light' ? '#E5746D' : '#C5656F') : (theme === 'light' ? '#C5656F' : '#E5746D'),
         color: '#F5F5F5',
-
     };
 
     const cardTitleStyle = {
         fontSize: '1.5rem',
         fontWeight: 'bold',
-        color: '#5864A1',
-        textShadow: '1px 0px 0px #C5656F',
+        color: theme === 'light' ? '#5864A1' : '#F5F5F5',
+        textShadow: theme === 'light' ? '1.5px 0px 0px #C5656F' : '1.5px 0px 0px #E5746D',
     };
 
 
     const imageStyle = {
         display: 'block',
-        margin: '1rem auto', // Combina ambas propiedades de margen
+        margin: '1rem auto',
         maxHeight: '18rem',
         width: '95%',
         objectFit: 'cover',
     };
 
     const containerStyle = {
-        marginTop: '7rem',  // Puedes ajustar el valor según tus necesidades
+        marginTop: '7rem',
     };
 
     return (

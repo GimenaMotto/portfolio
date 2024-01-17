@@ -189,13 +189,12 @@ const VasarelySketch1 = () => {
                 p.quad(190, 320, 260, 390, 210, 480, 140, 410);
             };
 
-            // Otras funciones o variables necesarias para tu sketch...
         };
 
         const canvas = new p5(sketch, canvasRef.current);
 
         return () => {
-            canvas.remove(); // Limpiar el sketch cuando el componente se desmonte
+            canvas.remove();
         };
     }, []);
 

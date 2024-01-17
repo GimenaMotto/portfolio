@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import p5 from 'p5'; // Importa la librería p5.js
+import p5 from 'p5';
 
 const RandomWalkerSketch = () => {
     const canvasRef = useRef(null);
@@ -9,7 +9,7 @@ const RandomWalkerSketch = () => {
         sketchInstance = new p5(sketch, canvasRef.current);
 
         return () => {
-            sketchInstance.remove(); // Limpia la instancia de p5 al desmontar el componente
+            sketchInstance.remove();
         };
     }, []);
 

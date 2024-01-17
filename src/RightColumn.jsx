@@ -8,17 +8,17 @@ const RightColumn = ({ showProjects, showSketches, showApplications }) => {
         <div>
             {showProjects && (
                 <div>
-                    <Cards /> {/* Aquí va el componente de las Cards */}
+                    <Cards />
                 </div>
             )}
             {showApplications && (
                 <div>
-                    <Cards2 /> {/* Aquí va el componente de las Cards2 */}
+                    <Cards2 />
                 </div>
             )}
             {showSketches && (
                 <div>
-                    <Sketches /> {/* Aquí va el componente de los Sketches */}
+                    <Sketches />
                 </div>
             )}
 
