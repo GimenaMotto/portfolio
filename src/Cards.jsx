@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import videorater from './videos/rater.mp4';
 import videorick from './videos/rickandmorty.mp4';
 import video360 from './videos/360.mp4';
 import { useTheme } from './useTheme';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt, faCode } from '@fortawesome/free-solid-svg-icons';
 
 
 const Cards = () => {
@@ -26,7 +28,7 @@ const Cards = () => {
         fontSize: '0.8rem',
         fontWeight: 'bold',
         filter: 'brightness(90%)',
-        border: theme === 'light' ? '2px solid #E5746D' : '2px solid #C5656F',
+        border: '2px solid #79A158',
 
     };
 
@@ -35,23 +37,20 @@ const Cards = () => {
     const [isWebButtonHovered, setIsWebButtonHovered] = useState(false);
     const [isRepoButtonHovered, setIsRepoButtonHovered] = useState(false);
 
-    const webButtonStyle = {
-        backgroundColor: isWebButtonHovered ? (theme === 'light' ? '#E5746D' : '#C5656F') : (theme === 'light' ? '#C5656F' : '#E5746D'),
-        borderColor: isWebButtonHovered ? (theme === 'light' ? '#E5746D' : '#C5656F') : (theme === 'light' ? '#C5656F' : '#E5746D'),
-        color: '#F5F5F5',
+    const webAndRepoStyle = {
+        color: isWebButtonHovered || isRepoButtonHovered ? '#C5656F' : 'rgba(197, 101, 111, 0.8)',
+        transition: 'color 0.3s',
+        textDecoration: 'none',
+        fontWeight: 'bold',
+
     };
 
-    const repoButtonStyle = {
-        backgroundColor: isRepoButtonHovered ? (theme === 'light' ? '#E5746D' : '#C5656F') : (theme === 'light' ? '#C5656F' : '#E5746D'),
-        borderColor: isRepoButtonHovered ? (theme === 'light' ? '#E5746D' : '#C5656F') : (theme === 'light' ? '#C5656F' : '#E5746D'),
-        color: '#F5F5F5',
-    };
 
     const cardTitleStyle = {
         fontSize: '1.5rem',
         fontWeight: 'bold',
         color: theme === 'light' ? '#5864A1' : '#F5F5F5',
-        textShadow: theme === 'light' ? '1.5px 0px 0px #C5656F' : '1.5px 0px 0px #E5746D',
+        textShadow: '1.5px 0px 0px #79A158',
     };
 
     const firstCardStyle = {
@@ -96,29 +95,33 @@ const Cards = () => {
                         Para poder visualizar todo puedes acceder con el usuario: Pimba y contraseña: 12345 o bien registrarte.
                     </Card.Text>
                     <div className="d-flex justify-content-center">
-                        <Button
-                            className="me-4 custom-btn"
+                        <a
                             href="https://rick-and-morty-project.fly.dev/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ ...webButtonStyle }}
+                            className="me-4 custom-icon-link"
+                            style={webAndRepoStyle}
                             onMouseEnter={() => setIsWebButtonHovered(true)}
                             onMouseLeave={() => setIsWebButtonHovered(false)}
                         >
-                            Web
-                        </Button>
-                        <Button
-                            className="custom-btn"
+                            <FontAwesomeIcon icon={faExternalLinkAlt} size="sm" />
+                            <span className="ms-2">Web</span>
+                        </a>
+                        <a
                             href="https://github.com/ivanpereariza/backend-project"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ ...repoButtonStyle }}
+                            className="me-4 custom-icon-link"
+                            style={webAndRepoStyle}
                             onMouseEnter={() => setIsRepoButtonHovered(true)}
                             onMouseLeave={() => setIsRepoButtonHovered(false)}
                         >
-                            Repo Github
-                        </Button>
+                            <FontAwesomeIcon icon={faCode} size="sm" />
+                            <span className="ms-2">Repo GitHub</span>
+                        </a>
+
                     </div>
+
                 </Card.Body>
             </Card>
 
@@ -145,29 +148,44 @@ const Cards = () => {
                         Tu texto para la tercera card Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </Card.Text>
                     <div className="d-flex justify-content-center">
-                        <Button
-                            className="me-4 custom-btn"
+                        <a
                             href="https://trips-app-client.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ ...webButtonStyle }}
+                            className="me-4 custom-icon-link"
+                            style={webAndRepoStyle}
                             onMouseEnter={() => setIsWebButtonHovered(true)}
                             onMouseLeave={() => setIsWebButtonHovered(false)}
                         >
-                            Web
-                        </Button>
-                        <Button
-                            className="custom-btn"
-                            href="URL_REPO_3"
+                            <FontAwesomeIcon icon={faExternalLinkAlt} size="sm" />
+                            <span className="ms-2">Web</span>
+                        </a>
+                        <a
+                            href=""
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ ...repoButtonStyle }}
+                            className="me-4 custom-icon-link"
+                            style={webAndRepoStyle}
                             onMouseEnter={() => setIsRepoButtonHovered(true)}
                             onMouseLeave={() => setIsRepoButtonHovered(false)}
                         >
-                            Repo Github
-                        </Button>
+                            <FontAwesomeIcon icon={faCode} size="sm" />
+                            <span className="ms-2">Repo GitHub client</span>
+                        </a>
+                        <a
+                            href=""
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="me-4 custom-icon-link"
+                            style={webAndRepoStyle}
+                            onMouseEnter={() => setIsRepoButtonHovered(true)}
+                            onMouseLeave={() => setIsRepoButtonHovered(false)}
+                        >
+                            <FontAwesomeIcon icon={faCode} size="sm" />
+                            <span className="ms-2">Repo GitHub server</span>
+                        </a>
                     </div>
+
                 </Card.Body>
             </Card>
 
@@ -190,29 +208,32 @@ const Cards = () => {
                         adjlasdjl askdjlksaj asldkjasjd lasjdlkasj dlksajd l
                     </Card.Text>
                     <div className="d-flex justify-content-center">
-                        <Button
-                            className="me-4 custom-btn"
+                        <a
                             href="https://gimenamotto.github.io/RATER_GAME_FINAL/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ ...webButtonStyle }}
+                            className="me-4 custom-icon-link"
+                            style={webAndRepoStyle}
                             onMouseEnter={() => setIsWebButtonHovered(true)}
                             onMouseLeave={() => setIsWebButtonHovered(false)}
                         >
-                            Web
-                        </Button>
-                        <Button
-                            className="custom-btn"
+                            <FontAwesomeIcon icon={faExternalLinkAlt} size="sm" />
+                            <span className="ms-2">Web</span>
+                        </a>
+                        <a
                             href="https://github.com/GimenaMotto/RATER_GAME_FINAL"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ ...repoButtonStyle }}
+                            className="me-4 custom-icon-link"
+                            style={webAndRepoStyle}
                             onMouseEnter={() => setIsRepoButtonHovered(true)}
                             onMouseLeave={() => setIsRepoButtonHovered(false)}
                         >
-                            Repo Github
-                        </Button>
+                            <FontAwesomeIcon icon={faCode} size="lg" />
+                            <span className="ms-2">Repo GitHub</span>
+                        </a>
                     </div>
+
                 </Card.Body>
             </Card>
 
@@ -237,29 +258,32 @@ const Cards = () => {
                         adjlasdjl askdjlksaj asldkjasjd lasjdlkasj dlksajd l
                     </Card.Text>
                     <div className="d-flex justify-content-center">
-                        <Button
-                            className="me-4 custom-btn"
+                        <a
                             href=""
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ ...webButtonStyle }}
+                            className="me-4 custom-icon-link"
+                            style={webAndRepoStyle}
                             onMouseEnter={() => setIsWebButtonHovered(true)}
                             onMouseLeave={() => setIsWebButtonHovered(false)}
                         >
-                            Web
-                        </Button>
-                        <Button
-                            className="custom-btn"
+                            <FontAwesomeIcon icon={faExternalLinkAlt} size="sm" />
+                            <span className="ms-2">Web</span>
+                        </a>
+                        <a
                             href="https://github.com/GimenaMotto/SilvinaNicotra"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ ...repoButtonStyle }}
+                            className="me-4 custom-icon-link"
+                            style={webAndRepoStyle}
                             onMouseEnter={() => setIsRepoButtonHovered(true)}
                             onMouseLeave={() => setIsRepoButtonHovered(false)}
                         >
-                            Repo Github
-                        </Button>
+                            <FontAwesomeIcon icon={faCode} size="sm" />
+                            <span className="ms-2">Repo GitHub</span>
+                        </a>
                     </div>
+
                 </Card.Body>
             </Card>
 

@@ -10,7 +10,7 @@
     letter-spacing: 1px;
     margin-bottom: 70px;
     text-shadow: 2px 0px 0px rgba(88, 100, 161, 0.6);
-    color: rgba(198, 101, 111, 0.9);
+    color: #C5656F;
 }
 
 .menu-text {
@@ -64,5 +64,5 @@
 
 .portfolio.dark .name-text {
     text-shadow: 2px 0px 0px rgba(245, 245, 245, 0.6);
-    color: rgba(229, 116, 109, 0.9)
+
 }
