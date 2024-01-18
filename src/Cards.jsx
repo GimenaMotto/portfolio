@@ -13,16 +13,16 @@ const Cards = () => {
     const { theme } = useTheme();
 
     const cardStyle = {
-        backgroundColor: theme === 'light' ? '#F5F5F5' : '#5864A1',
-        color: theme === 'light' ? '#5864A1' : '#F5F5F5',
+        backgroundColor: theme === 'light' ? '#F5F5F5' : '#3161A3',
+        color: theme === 'light' ? '#3161A3' : '#F5F5F5',
         border: theme === 'light' ? '1px solid rgba(88, 100, 161, 0.2)' : '1px solid rgba(245, 245, 245, 0.2)',
         width: '40rem',
     };
 
 
     const badgeStyle = {
-        color: theme === 'light' ? '#5864A1' : '#F5F5F5',
-        padding: '0.15rem 0.3rem',
+        color: theme === 'light' ? '#3161A3' : '#F5F5F5',
+        padding: '0.10rem 0.3rem',
         borderRadius: '0.25rem',
         marginRight: '0.5rem',
         fontSize: '0.8rem',
@@ -38,7 +38,7 @@ const Cards = () => {
     const [isRepoButtonHovered, setIsRepoButtonHovered] = useState(false);
 
     const webAndRepoStyle = {
-        color: isWebButtonHovered || isRepoButtonHovered ? '#C5656F' : 'rgba(197, 101, 111, 0.8)',
+        color: isWebButtonHovered || isRepoButtonHovered ? '#C5656F' : 'rgba(197, 101, 111, 1)',
         transition: 'color 0.3s',
         textDecoration: 'none',
         fontWeight: 'bold',
@@ -49,13 +49,13 @@ const Cards = () => {
     const cardTitleStyle = {
         fontSize: '1.5rem',
         fontWeight: 'bold',
-        color: theme === 'light' ? '#5864A1' : '#F5F5F5',
+        color: theme === 'light' ? '#3161A3' : '#F5F5F5',
         textShadow: '1.5px 0px 0px #79A158',
     };
 
     const firstCardStyle = {
         ...cardStyle,
-        marginTop: '7rem',
+        marginTop: '5rem',
     };
 
 
@@ -86,7 +86,7 @@ const Cards = () => {
                     </div>
 
 
-                    <Card.Text className="mt-2">
+                    <Card.Text className="mt-3 mx-3">
                         Wiki de la serie Rick and Morty.<br />
                         Puedes buscar todos los personajes, episodios y locaciones.<br />
                         Red social con sistema auth que te permite guardar en favoritos, crear eventos en los que otros usuarios pueden participar.<br />

@@ -9,8 +9,8 @@
     font-size: 2.2em;
     letter-spacing: 1px;
     margin-bottom: 70px;
-    text-shadow: 2px 0px 0px rgba(88, 100, 161, 0.6);
-    color: #C5656F;
+    text-shadow: 2px 0px 0px rgba(49, 97, 163, 0.6);
+    color: rgba(197, 101, 111, 1);
 }
 
 .menu-text {
@@ -34,16 +34,16 @@
 
 .icon {
     margin: 15px;
-    color: rgba(88, 100, 161, 0.8);
+    color: rgba(49, 97, 163, 0.8);
     transition: transform 0.2s;
 }
 
 .icon:hover {
-    color: rgba(88, 100, 161, 1);
+    color: rgba(49, 97, 163, 1);
 }
 
 .menu-link {
-    color: #5864A1;
+    color: #3161A3;
     cursor: pointer;
     font-size: 1em;
     display: block;
@@ -63,6 +63,6 @@
 }
 
 .portfolio.dark .name-text {
-    text-shadow: 2px 0px 0px rgba(245, 245, 245, 0.6);
+    text-shadow: 2px 0px 0px rgba(255, 255, 255, 0.6);
 
 }

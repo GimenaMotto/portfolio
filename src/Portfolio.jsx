@@ -15,7 +15,7 @@ const Portfolio = () => {
     return (
         <div className={`portfolio ${theme}`}>
             <button onClick={toggleTheme} className="theme-button">
-                {theme === 'light' ? <Moon size={22} /> : <Sun size={22} />}
+                {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
             </button>
 
             <div className="left-column">
