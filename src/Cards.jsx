@@ -86,13 +86,13 @@ const Cards = () => {
                     </div>
 
 
-                    <Card.Text className="mt-3 mx-3">
-                        Wiki de la serie Rick and Morty.<br />
-                        Puedes buscar todos los personajes, episodios y locaciones.<br />
-                        Red social con sistema auth que te permite guardar en favoritos, crear eventos en los que otros usuarios pueden participar.<br />
-                        Realizada como trabajo de Bootcamp en Ironhack junto a mi compañero Iván Pereiro.<br />
-                        Trabajamos con la siguiente API: https://rickandmortyapi.com/<br />
-                        Para poder visualizar todo puedes acceder con el usuario: Pimba y contraseña: 12345 o bien registrarte.
+                    <Card.Text className="mt-3 mx-5">
+                        Red social con funciones de registro, inicio, cierre de sesión y autorización.<br />
+                        Aplicación CRUD.<br />
+                        Integración de Google Maps. <br />
+                        Validación de Backend y manejo de errores. Trabajamos con la siguiente API: https://rickandmortyapi.com/<br />
+                        Desarrollado junto a Iván Pereiro.<br />
+
                     </Card.Text>
                     <div className="d-flex justify-content-center">
                         <a
@@ -126,7 +126,7 @@ const Cards = () => {
             </Card>
 
             <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>360 red social viajes</h5>
+                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Red social viajes</h5>
                 <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }}>
                     <source src={video360} type="video/mp4" />
                     Tu navegador no soporta el elemento de video.
@@ -144,8 +144,14 @@ const Cards = () => {
                         <span style={{ ...badgeStyle, marginTop: '8px' }}>Bootstrap</span>
                     </div>
 
-                    <Card.Text style={{ textAlign: 'justify' }} className="mt-2">
-                        Tu texto para la tercera card Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <Card.Text className="mt-3 mx-5 ">
+                        Aplicación Full-stack utilizando la pila MERN. <br />
+                        Interfaz SPA construida con REACT que consta de múltiples vistas e implementa todas las acciones CRUD.<br />
+                        Backend de API REST creado con ExpressJS, MongoDB y Mongoose. <br />
+                        Funciones de registro, inicio, cierre de sesión y autorización. <br />
+                        Validación de Backend y manejo de errores. <br />
+                        Integración de Google Maps. <br />
+                        Desarrollado junto a Alvaro Moreno.<br />
                     </Card.Text>
                     <div className="d-flex justify-content-center">
                         <a
@@ -203,9 +209,10 @@ const Cards = () => {
                         <span style={badgeStyle}>CanvasJS</span>
                     </div>
 
-                    <Card.Text style={{ textAlign: 'justify' }} className="mt-2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos skañlsdklakdlsajdkasdkj asljdls
-                        adjlasdjl askdjlksaj asldkjasjd lasjdlkasj dlksajd l
+                    <Card.Text className="mt-3 mx-5">
+                        Videojuego proyecto de Bootcamp en Ironhack<br />
+                        Realizado con Javascript y CanvasJS. <br />
+                        Desarrollado junto a Miguel Ferragut.<br />
                     </Card.Text>
                     <div className="d-flex justify-content-center">
                         <a
@@ -238,7 +245,7 @@ const Cards = () => {
             </Card>
 
             <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Página web fotografa</h5>
+                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Interfaz SPA con fotografías</h5>
                 <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }}>
                     <source src={videorater} type="video/mp4" />
                     Tu navegador no soporta el elemento de video.
@@ -253,13 +260,14 @@ const Cards = () => {
 
                     </div>
 
-                    <Card.Text style={{ textAlign: 'justify' }} className="mt-2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos skañlsdklakdlsajdkasdkj asljdls
-                        adjlasdjl askdjlksaj asldkjasjd lasjdlkasj dlksajd l
+                    <Card.Text className="mt-3 mx-5">
+                        Interfaz SPA construida con React y Material UI. <br />
+                        Página de inicio interactiva con posibilidades de modificar fotografías, tamaños, ubicación. <br />
+
                     </Card.Text>
                     <div className="d-flex justify-content-center">
                         <a
-                            href=""
+                            href="https://admirable-cascaron-37509c.netlify.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="me-4 custom-icon-link"

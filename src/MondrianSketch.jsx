@@ -7,6 +7,12 @@ const MondrianSketch = () => {
     let verticalOffset = 0;
     let sketchInstance = null;
 
+
+
+    const marginStyle = {
+
+        marginTop: '200px',
+    };
     useEffect(() => {
         const sketch = (p) => {
             p.setup = () => {
@@ -115,7 +121,12 @@ const MondrianSketch = () => {
         };
     }, []);
 
-    return <div ref={canvasRef}></div>;
+    return (
+        <div style={marginStyle}>
+            <p>Mondrian sketch. Desilzarse sobre ejes X e Y.</p>
+            <div ref={canvasRef} />
+        </div>
+    );
 };
 
 export default MondrianSketch;

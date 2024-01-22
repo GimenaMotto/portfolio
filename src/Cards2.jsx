@@ -103,9 +103,10 @@ const Cards2 = () => {
                         <span style={badgeStyle}>Nodemailer</span>
                     </div>
 
-                    <Card.Text style={{ textAlign: 'justify' }} className="mt-2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos skañlsdklakdlsajdkasdkj asljdls
-                        adjlasdjl askdjlksaj asldkjasjd lasjdlkasj dlksajd l
+                    <Card.Text className="mt-3 mx-5">
+                        Aplicación para el área contable de Oposiciones Arquitectos Madrid.<br />
+                        Genera facturas en pdf con los datos de los alumnos/as y los envía a sus correos electrónicos a través de Nodemailer
+
                     </Card.Text>
                     <div className="d-flex justify-content-center">
                         <a
@@ -154,9 +155,10 @@ const Cards2 = () => {
 
                     </div>
 
-                    <Card.Text style={{ textAlign: 'justify' }} className="mt-2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos skañlsdklakdlsajdkasdkj asljdls
-                        adjlasdjl askdjlksaj asldkjasjd lasjdlkasj dlksajd l
+                    <Card.Text className="mt-3 mx-5">
+                        Aplicación para el área administrativa de Oposiciones Arquitectos Madrid.<br />
+                        Genera diferentes tipos de certificados con los datos de los cursos y alumnos/as y los envía a sus correos electrónicos a través de Nodemailer
+
                     </Card.Text>
                     <div className="d-flex justify-content-center">
                         <a
@@ -175,7 +177,7 @@ const Cards2 = () => {
                     </div>
                 </Card.Body>
             </Card>
-        </div>
+        </div >
     );
 };
 

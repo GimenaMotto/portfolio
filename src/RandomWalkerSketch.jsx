@@ -5,6 +5,12 @@ const RandomWalkerSketch = () => {
     const canvasRef = useRef(null);
     let sketchInstance = null;
 
+
+    const marginStyle = {
+
+        marginTop: '130px',
+    };
+
     useEffect(() => {
         sketchInstance = new p5(sketch, canvasRef.current);
 
@@ -63,7 +69,12 @@ const RandomWalkerSketch = () => {
         };
     };
 
-    return <div ref={canvasRef} />;
+    return (
+        <div style={marginStyle}>
+            <p>Random walker.</p>
+            <div ref={canvasRef} />
+        </div>
+    );
 };
 
 export default RandomWalkerSketch;

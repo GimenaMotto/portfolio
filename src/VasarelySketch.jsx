@@ -133,6 +133,7 @@ const VasarelySketch = () => {
                 fondo = p.color(252, 252, 247);
                 loop = p.color(49, 49, 52);
             };
+
         };
 
         const sketchInstance = new p5(sketch);
