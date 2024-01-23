@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Card, Button, Carousel } from 'react-bootstrap';
 import facturación from './images/facturación.jpg';
 import certificados from './images/certificados.jpg';
+import factura from './images/factura.jpg'
+import certificado from './images/certificado.jpg'
 import { useTheme } from './useTheme';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 import './Cards2.css';
 
 
@@ -62,7 +64,15 @@ const Cards2 = () => {
         display: 'block',
         margin: '1rem auto',
         maxHeight: '18rem',
-        width: '95%',
+        width: '90%',
+        objectFit: 'cover',
+    };
+
+    const imageStyle2 = {
+        display: 'block',
+        margin: '1rem auto',
+        maxWidth: '100%',
+        maxHeight: '18rem',
         objectFit: 'cover',
     };
 
@@ -74,21 +84,21 @@ const Cards2 = () => {
         <div style={containerStyle}>
 
             <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Diplomas</h5>
+                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>App facturación</h5>
 
                 <Carousel interval={null} indicators={false}>
                     <Carousel.Item>
                         <img
-                            src={certificados}
-                            alt="App certificados img"
+                            src={facturación}
+                            alt="App facturación img"
                             style={imageStyle}
                         />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            src={certificados}
-                            alt="App certificados img"
-                            style={imageStyle}
+                            src={factura}
+                            alt="App facturación pdf img"
+                            style={imageStyle2}
                         />
                     </Carousel.Item>
                 </Carousel>
@@ -101,6 +111,7 @@ const Cards2 = () => {
                         <span style={badgeStyle}>CSS</span>
                         <span style={badgeStyle}>JavaScript</span>
                         <span style={badgeStyle}>Nodemailer</span>
+                        <span style={badgeStyle}>Json</span>
                     </div>
 
                     <Card.Text className="mt-3 mx-5">
@@ -110,7 +121,7 @@ const Cards2 = () => {
                     </Card.Text>
                     <div className="d-flex justify-content-center">
                         <a
-                            href="https://github.com/ivanpereariza/backend-project"
+                            href="https://github.com/OposicionesArquitectoMadrid/interfaz"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="me-4 custom-icon-link"
@@ -127,20 +138,20 @@ const Cards2 = () => {
             </Card>
 
             <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Facturación</h5>
+                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>App diplomas y certificados</h5>
                 <Carousel interval={null} indicators={false}>
-                    <Carousel.Item>
-                        <img
-                            src={facturación}
-                            alt="App facturación img"
-                            style={imageStyle}
-                        />
-                    </Carousel.Item>
                     <Carousel.Item>
                         <img
                             src={certificados}
                             alt="App certificados img"
                             style={imageStyle}
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            src={certificado}
+                            alt="App certificados pdf img"
+                            style={imageStyle2}
                         />
                     </Carousel.Item>
                 </Carousel>
@@ -152,17 +163,18 @@ const Cards2 = () => {
                         <span style={badgeStyle}>CSS</span>
                         <span style={badgeStyle}>JavaScript</span>
                         <span style={badgeStyle}>Nodemailer</span>
+                        <span style={badgeStyle}>Json</span>
 
                     </div>
 
                     <Card.Text className="mt-3 mx-5">
                         Aplicación para el área administrativa de Oposiciones Arquitectos Madrid.<br />
-                        Genera diferentes tipos de certificados con los datos de los cursos y alumnos/as y los envía a sus correos electrónicos a través de Nodemailer
+                        Genera diferentes tipos de certificados y diplomaa con los datos de los cursos y alumnos/as y los envía a sus correos electrónicos a través de Nodemailer
 
                     </Card.Text>
                     <div className="d-flex justify-content-center">
                         <a
-                            href="https://github.com/ivanpereariza/backend-project"
+                            href="https://github.com/OposicionesArquitectoMadrid/certificados"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="me-4 custom-icon-link"
