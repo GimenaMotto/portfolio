@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4256e346.css",
+    "main.js": "/static/js/main.a8dbc134.js",
+    "static/media/rickandmorty.mp4": "/static/media/rickandmorty.9644379d58add3ba2e15.mp4",
+    "static/media/360.mp4": "/static/media/360.6ea36ed37bbc8c6d2e75.mp4",
+    "static/media/silviAn.mp4": "/static/media/silviAn.7300adba82a131f9a49a.mp4",
+    "static/media/rater.jpg": "/static/media/rater.d218b8ffdb2f6dc52399.jpg",
+    "static/media/certificados.jpg": "/static/media/certificados.b0319fc9ad5a86c85b46.jpg",
+    "static/media/facturación.jpg": "/static/media/facturación.36b7e99c479f661fac5a.jpg",
+    "index.html": "/index.html",
+    "main.4256e346.css.map": "/static/css/main.4256e346.css.map",
+    "main.a8dbc134.js.map": "/static/js/main.a8dbc134.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4256e346.css",
+    "static/js/main.a8dbc134.js"
+  ]
+}
