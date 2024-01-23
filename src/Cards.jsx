@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
-import videorater from './videos/rater.mp4';
+import rater from './images/rater.jpg';
 import videorick from './videos/rickandmorty.mp4';
 import video360 from './videos/360.mp4';
+import silviAn from './videos/silviAn.mp4'
 import { useTheme } from './useTheme';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt, faCode } from '@fortawesome/free-solid-svg-icons';
@@ -59,44 +60,41 @@ const Cards = () => {
     };
 
 
-
+    const imageStyle = {
+        display: 'block',
+        margin: '1rem auto',
+        maxHeight: '18rem',
+        width: '75%',
+        objectFit: 'cover',
+    };
 
     return (
         <div>
 
-
             <Card className="mb-3 mx-auto" style={firstCardStyle}>
-                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Wiki Rick and Morty</h5>
+                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Interfaz SPA con fotografías</h5>
                 <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }}>
-                    <source src={videorick} type="video/mp4" />
+                    <source src={silviAn} type="video/mp4" />
                     Tu navegador no soporta el elemento de video.
                 </video>
                 <Card.Body>
-
                     <div className="d-flex flex-wrap justify-content-center text-center" style={{ margin: '0 4.5rem' }}>
+                        <span style={badgeStyle}>React</span>
+                        <span style={badgeStyle}>Material UI</span>
                         <span style={badgeStyle}>HTML</span>
                         <span style={badgeStyle}>CSS</span>
                         <span style={badgeStyle}>JavaScript</span>
-                        <span style={badgeStyle}>MongoDB</span>
-                        <span style={badgeStyle}>Mongoose</span>
-                        <span style={badgeStyle}>ExpressJS</span>
-                        <span style={{ ...badgeStyle, marginTop: '8px' }}>Nodemailer</span>
-                        <span style={{ ...badgeStyle, marginTop: '8px' }}>Cloudinary</span>
-                        <span style={{ ...badgeStyle, marginTop: '8px' }}>API Google</span>
+
                     </div>
 
-
                     <Card.Text className="mt-3 mx-5">
-                        Red social con funciones de registro, inicio, cierre de sesión y autorización.<br />
-                        Aplicación CRUD.<br />
-                        Integración de Google Maps. <br />
-                        Validación de Backend y manejo de errores. Trabajamos con la siguiente API: https://rickandmortyapi.com/<br />
-                        Desarrollado junto a Iván Pereiro.<br />
+                        Interfaz SPA construida con React y Material UI. <br />
+                        Página de inicio interactiva con posibilidades de modificar fotografías, tamaños, ubicación. <br />
 
                     </Card.Text>
                     <div className="d-flex justify-content-center">
                         <a
-                            href="https://rick-and-morty-project.fly.dev/"
+                            href="https://admirable-cascaron-37509c.netlify.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="me-4 custom-icon-link"
@@ -108,7 +106,7 @@ const Cards = () => {
                             <span className="ms-2">Web</span>
                         </a>
                         <a
-                            href="https://github.com/ivanpereariza/backend-project"
+                            href="https://github.com/GimenaMotto/SilvinaNicotra"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="me-4 custom-icon-link"
@@ -119,7 +117,6 @@ const Cards = () => {
                             <FontAwesomeIcon icon={faCode} size="sm" />
                             <span className="ms-2">Repo GitHub</span>
                         </a>
-
                     </div>
 
                 </Card.Body>
@@ -194,13 +191,76 @@ const Cards = () => {
 
                 </Card.Body>
             </Card>
+            <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
+                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Wiki Rick and Morty</h5>
+                <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }}>
+                    <source src={videorick} type="video/mp4" />
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <Card.Body>
+
+                    <div className="d-flex flex-wrap justify-content-center text-center" style={{ margin: '0 4.5rem' }}>
+                        <span style={badgeStyle}>HTML</span>
+                        <span style={badgeStyle}>CSS</span>
+                        <span style={badgeStyle}>JavaScript</span>
+                        <span style={badgeStyle}>MongoDB</span>
+                        <span style={badgeStyle}>Mongoose</span>
+                        <span style={badgeStyle}>ExpressJS</span>
+                        <span style={{ ...badgeStyle, marginTop: '8px' }}>Nodemailer</span>
+                        <span style={{ ...badgeStyle, marginTop: '8px' }}>Cloudinary</span>
+                        <span style={{ ...badgeStyle, marginTop: '8px' }}>API Google</span>
+                    </div>
+
+
+                    <Card.Text className="mt-3 mx-5">
+                        Red social con funciones de registro, inicio, cierre de sesión y autorización.<br />
+                        Aplicación CRUD.<br />
+                        Integración de Google Maps. <br />
+                        Validación de Backend y manejo de errores. Trabajamos con la siguiente API: https://rickandmortyapi.com/<br />
+                        Desarrollado junto a Iván Pereiro.<br />
+
+                    </Card.Text>
+                    <div className="d-flex justify-content-center">
+                        <a
+                            href="https://rick-and-morty-project.fly.dev/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="me-4 custom-icon-link"
+                            style={webAndRepoStyle}
+                            onMouseEnter={() => setIsWebButtonHovered(true)}
+                            onMouseLeave={() => setIsWebButtonHovered(false)}
+                        >
+                            <FontAwesomeIcon icon={faExternalLinkAlt} size="sm" />
+                            <span className="ms-2">Web</span>
+                        </a>
+                        <a
+                            href="https://github.com/ivanpereariza/backend-project"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="me-4 custom-icon-link"
+                            style={webAndRepoStyle}
+                            onMouseEnter={() => setIsRepoButtonHovered(true)}
+                            onMouseLeave={() => setIsRepoButtonHovered(false)}
+                        >
+                            <FontAwesomeIcon icon={faCode} size="sm" />
+                            <span className="ms-2">Repo GitHub</span>
+                        </a>
+
+                    </div>
+
+                </Card.Body>
+            </Card>
+
+
+
 
             <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
                 <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Videojuego</h5>
-                <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }}>
-                    <source src={videorater} type="video/mp4" />
-                    Tu navegador no soporta el elemento de video.
-                </video>
+                <img
+                    src={rater}
+                    alt="Videojuego img"
+                    style={imageStyle}
+                />
                 <Card.Body>
                     <div className="d-flex flex-wrap justify-content-center text-center" style={{ margin: '0 4.5rem' }}>
                         <span style={badgeStyle}>HTML</span>
@@ -244,56 +304,6 @@ const Cards = () => {
                 </Card.Body>
             </Card>
 
-            <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Interfaz SPA con fotografías</h5>
-                <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }}>
-                    <source src={videorater} type="video/mp4" />
-                    Tu navegador no soporta el elemento de video.
-                </video>
-                <Card.Body>
-                    <div className="d-flex flex-wrap justify-content-center text-center" style={{ margin: '0 4.5rem' }}>
-                        <span style={badgeStyle}>React</span>
-                        <span style={badgeStyle}>Material UI</span>
-                        <span style={badgeStyle}>HTML</span>
-                        <span style={badgeStyle}>CSS</span>
-                        <span style={badgeStyle}>JavaScript</span>
-
-                    </div>
-
-                    <Card.Text className="mt-3 mx-5">
-                        Interfaz SPA construida con React y Material UI. <br />
-                        Página de inicio interactiva con posibilidades de modificar fotografías, tamaños, ubicación. <br />
-
-                    </Card.Text>
-                    <div className="d-flex justify-content-center">
-                        <a
-                            href="https://admirable-cascaron-37509c.netlify.app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="me-4 custom-icon-link"
-                            style={webAndRepoStyle}
-                            onMouseEnter={() => setIsWebButtonHovered(true)}
-                            onMouseLeave={() => setIsWebButtonHovered(false)}
-                        >
-                            <FontAwesomeIcon icon={faExternalLinkAlt} size="sm" />
-                            <span className="ms-2">Web</span>
-                        </a>
-                        <a
-                            href="https://github.com/GimenaMotto/SilvinaNicotra"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="me-4 custom-icon-link"
-                            style={webAndRepoStyle}
-                            onMouseEnter={() => setIsRepoButtonHovered(true)}
-                            onMouseLeave={() => setIsRepoButtonHovered(false)}
-                        >
-                            <FontAwesomeIcon icon={faCode} size="sm" />
-                            <span className="ms-2">Repo GitHub</span>
-                        </a>
-                    </div>
-
-                </Card.Body>
-            </Card>
 
         </div>
     );

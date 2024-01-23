@@ -11,7 +11,7 @@ const MondrianSketch = () => {
 
     const marginStyle = {
 
-        marginTop: '200px',
+        marginTop: '300px',
     };
     useEffect(() => {
         const sketch = (p) => {

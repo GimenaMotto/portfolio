@@ -7,6 +7,12 @@ const VasarelySketch = () => {
     let fondo, loop, azul;
     let rojo, verde, amarillo;
 
+    const marginStyle = {
+        marginTop: '390px',
+
+
+    };
+
     useEffect(() => {
         const sketch = (p) => {
             p.setup = () => {
@@ -143,7 +149,12 @@ const VasarelySketch = () => {
         };
     }, []);
 
-    return <div ref={canvasRef}></div>;
+    return (
+        <div style={marginStyle}>
+            <p>Vasarely Sketch. Deslizar mouse y hacer click.</p>
+            <div ref={canvasRef} />
+        </div>
+    );
 };
 
 export default VasarelySketch;

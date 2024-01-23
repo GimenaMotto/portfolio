@@ -5,6 +5,10 @@ const TrianglesSketch = () => {
     const canvasRef = useRef(null);
     let sketchInstance = null;
 
+    const marginStyle = {
+
+        marginTop: '80px',
+    };
     useEffect(() => {
         sketchInstance = new p5(sketch, canvasRef.current);
 
@@ -65,7 +69,7 @@ const TrianglesSketch = () => {
     };
 
     return (
-        <div>
+        <div style={marginStyle}>
             <p>Dibuja más triángulos haciendo click en el lienzo.</p>
             <div ref={canvasRef} />
         </div>

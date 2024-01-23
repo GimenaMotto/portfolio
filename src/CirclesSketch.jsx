@@ -7,7 +7,7 @@ const CirclesSketch = () => {
 
     const marginStyle = {
 
-        marginTop: '70px',
+        marginTop: '150px',
     };
 
     useEffect(() => {
@@ -88,7 +88,7 @@ const CirclesSketch = () => {
 
     return (
         <div style={marginStyle}>
-            <p>Click apra cambiar el espectro de colores.</p>
+            <p>Haz click apra cambiar el espectro de colores.</p>
             <div ref={canvasRef} />
         </div>
     );
