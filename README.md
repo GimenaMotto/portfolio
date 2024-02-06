@@ -11,8 +11,8 @@ Welcome to my portfolio! You can visit the deployed version [here](https://portf
 - **JavaScript**
 - **Node.js**
 
-![Portfolio Image 1](images/image1.jpg)
-![Portfolio Image 2](images/image2.jpg)
+![Portfolio Image 1](src/images/image1.jpg)
+![Portfolio Image 2](src/images/image2.jpg)
 
 ## 🛠️ Projects
 
