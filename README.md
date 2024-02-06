@@ -42,6 +42,8 @@ Here are some of the projects I've worked on:
    - **Technologies Used:** ElectronJS, NodeJS, HTML, CSS, JavaScript, Nodemailer, JSON.
    - **GitHub Repository:** [GitHub Repo](https://github.com/OposicionesArquitectoMadrid/interfaz)
 
+   Check out my portfolio for more projects!
+
 ## How to Run Locally
 
 If you want to run this project locally, follow these steps:
