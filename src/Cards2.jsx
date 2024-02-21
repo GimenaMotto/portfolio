@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, Button, Carousel } from 'react-bootstrap';
 import facturación from './images/facturación.jpg';
 import certificados from './images/certificados.jpg';
@@ -12,6 +12,30 @@ import './Cards2.css';
 
 const Cards2 = () => {
 
+    const [imagesLoaded, setImagesLoaded] = useState(false);
+
+    useEffect(() => {
+        Promise.all([
+            loadImage(facturación),
+            loadImage(certificados),
+            loadImage(factura),
+            loadImage(certificado),
+
+        ]).then(() => {
+            setImagesLoaded(true);
+        }).catch(error => {
+            console.error("Error loading images:", error);
+        });
+    }, []);
+
+    const loadImage = (src) => {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve();
+            img.onerror = () => reject(`Error loading image: ${src}`);
+            img.src = src;
+        });
+    };
     const { theme } = useTheme();
 
     const cardStyle = {
@@ -81,115 +105,117 @@ const Cards2 = () => {
     };
 
     return (
-        <div style={containerStyle}>
+        imagesLoaded && (
+            <div style={containerStyle}>
 
-            <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>App facturación</h5>
+                <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
+                    <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>App facturación</h5>
 
-                <Carousel interval={null} indicators={false}>
-                    <Carousel.Item>
-                        <img
-                            src={facturación}
-                            alt="App facturación img"
-                            style={imageStyle}
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            src={factura}
-                            alt="App facturación pdf img"
-                            style={imageStyle2}
-                        />
-                    </Carousel.Item>
-                </Carousel>
+                    <Carousel interval={null} indicators={false}>
+                        <Carousel.Item>
+                            <img
+                                src={facturación}
+                                alt="App facturación img"
+                                style={imageStyle}
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                src={factura}
+                                alt="App facturación pdf img"
+                                style={imageStyle2}
+                            />
+                        </Carousel.Item>
+                    </Carousel>
 
-                <Card.Body>
-                    <div className="d-flex flex-wrap justify-content-center text-center">
-                        <span style={badgeStyle}>ElectronJS</span>
-                        <span style={badgeStyle}>NodeJS</span>
-                        <span style={badgeStyle}>HTML</span>
-                        <span style={badgeStyle}>CSS</span>
-                        <span style={badgeStyle}>JavaScript</span>
-                        <span style={badgeStyle}>Nodemailer</span>
-                        <span style={badgeStyle}>Json</span>
-                    </div>
+                    <Card.Body>
+                        <div className="d-flex flex-wrap justify-content-center text-center">
+                            <span style={badgeStyle}>ElectronJS</span>
+                            <span style={badgeStyle}>NodeJS</span>
+                            <span style={badgeStyle}>HTML</span>
+                            <span style={badgeStyle}>CSS</span>
+                            <span style={badgeStyle}>JavaScript</span>
+                            <span style={badgeStyle}>Nodemailer</span>
+                            <span style={badgeStyle}>Json</span>
+                        </div>
 
-                    <Card.Text className="mt-3 mx-5">
-                        Aplicación para el área contable de Oposiciones Arquitectos Madrid.<br />
-                        Genera facturas en pdf con los datos de los alumnos/as y los envía a sus correos electrónicos a través de Nodemailer
+                        <Card.Text className="mt-3 mx-5">
+                            Aplicación para el área contable de Oposiciones Arquitectos Madrid.<br />
+                            Genera facturas en pdf con los datos de los alumnos/as y los envía a sus correos electrónicos a través de Nodemailer
 
-                    </Card.Text>
-                    <div className="d-flex justify-content-center">
-                        <a
-                            href="https://github.com/OposicionesArquitectoMadrid/interfaz"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="me-4 custom-icon-link"
-                            style={webAndRepoStyle}
-                            onMouseEnter={() => setIsRepoButtonHovered(true)}
-                            onMouseLeave={() => setIsRepoButtonHovered(false)}
-                        >
-                            <FontAwesomeIcon icon={faCode} size="sm" />
-                            <span className="ms-2">Repo GitHub</span>
-                        </a>
+                        </Card.Text>
+                        <div className="d-flex justify-content-center">
+                            <a
+                                href="https://github.com/OposicionesArquitectoMadrid/interfaz"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="me-4 custom-icon-link"
+                                style={webAndRepoStyle}
+                                onMouseEnter={() => setIsRepoButtonHovered(true)}
+                                onMouseLeave={() => setIsRepoButtonHovered(false)}
+                            >
+                                <FontAwesomeIcon icon={faCode} size="sm" />
+                                <span className="ms-2">Repo GitHub</span>
+                            </a>
 
-                    </div>
-                </Card.Body>
-            </Card>
+                        </div>
+                    </Card.Body>
+                </Card>
 
-            <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>App diplomas y certificados</h5>
-                <Carousel interval={null} indicators={false}>
-                    <Carousel.Item>
-                        <img
-                            src={certificados}
-                            alt="App certificados img"
-                            style={imageStyle}
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            src={certificado}
-                            alt="App certificados pdf img"
-                            style={imageStyle2}
-                        />
-                    </Carousel.Item>
-                </Carousel>
-                <Card.Body>
-                    <div className="d-flex flex-wrap justify-content-center text-center">
-                        <span style={badgeStyle}>ElectronJS</span>
-                        <span style={badgeStyle}>NodeJS</span>
-                        <span style={badgeStyle}>HTML</span>
-                        <span style={badgeStyle}>CSS</span>
-                        <span style={badgeStyle}>JavaScript</span>
-                        <span style={badgeStyle}>Nodemailer</span>
-                        <span style={badgeStyle}>Json</span>
+                <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
+                    <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>App diplomas y certificados</h5>
+                    <Carousel interval={null} indicators={false}>
+                        <Carousel.Item>
+                            <img
+                                src={certificados}
+                                alt="App certificados img"
+                                style={imageStyle}
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                src={certificado}
+                                alt="App certificados pdf img"
+                                style={imageStyle2}
+                            />
+                        </Carousel.Item>
+                    </Carousel>
+                    <Card.Body>
+                        <div className="d-flex flex-wrap justify-content-center text-center">
+                            <span style={badgeStyle}>ElectronJS</span>
+                            <span style={badgeStyle}>NodeJS</span>
+                            <span style={badgeStyle}>HTML</span>
+                            <span style={badgeStyle}>CSS</span>
+                            <span style={badgeStyle}>JavaScript</span>
+                            <span style={badgeStyle}>Nodemailer</span>
+                            <span style={badgeStyle}>Json</span>
 
-                    </div>
+                        </div>
 
-                    <Card.Text className="mt-3 mx-5">
-                        Aplicación para el área administrativa de Oposiciones Arquitectos Madrid.<br />
-                        Genera diferentes tipos de certificados y diplomaa con los datos de los cursos y alumnos/as y los envía a sus correos electrónicos a través de Nodemailer
+                        <Card.Text className="mt-3 mx-5">
+                            Aplicación para el área administrativa de Oposiciones Arquitectos Madrid.<br />
+                            Genera diferentes tipos de certificados y diplomaa con los datos de los cursos y alumnos/as y los envía a sus correos electrónicos a través de Nodemailer
 
-                    </Card.Text>
-                    <div className="d-flex justify-content-center">
-                        <a
-                            href="https://github.com/OposicionesArquitectoMadrid/certificados"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="me-4 custom-icon-link"
-                            style={webAndRepoStyle}
-                            onMouseEnter={() => setIsRepoButtonHovered(true)}
-                            onMouseLeave={() => setIsRepoButtonHovered(false)}
-                        >
-                            <FontAwesomeIcon icon={faCode} size="sm" />
-                            <span className="ms-2">Repo GitHub</span>
-                        </a>
+                        </Card.Text>
+                        <div className="d-flex justify-content-center">
+                            <a
+                                href="https://github.com/OposicionesArquitectoMadrid/certificados"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="me-4 custom-icon-link"
+                                style={webAndRepoStyle}
+                                onMouseEnter={() => setIsRepoButtonHovered(true)}
+                                onMouseLeave={() => setIsRepoButtonHovered(false)}
+                            >
+                                <FontAwesomeIcon icon={faCode} size="sm" />
+                                <span className="ms-2">Repo GitHub</span>
+                            </a>
 
-                    </div>
-                </Card.Body>
-            </Card>
-        </div >
+                        </div>
+                    </Card.Body>
+                </Card>
+            </div >
+        )
     );
 };
 
