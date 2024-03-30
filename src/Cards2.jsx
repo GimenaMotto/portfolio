@@ -54,7 +54,7 @@ const Cards2 = () => {
         fontSize: '0.8rem',
         fontWeight: 'bold',
         filter: 'brightness(90%)',
-        border: '2px solid #79A158',
+        border: '2px solid #4ABB85',
 
     };
 
@@ -64,7 +64,7 @@ const Cards2 = () => {
     const [isRepoButtonHovered, setIsRepoButtonHovered] = useState(false);
 
     const webAndRepoStyle = {
-        color: isWebButtonHovered || isRepoButtonHovered ? '#C5656F' : 'rgba(197, 101, 111, 1)',
+        color: isWebButtonHovered || isRepoButtonHovered ? 'rgba(74, 187, 133, 1)' : 'rgba(74, 187, 133, 1)',
         transition: 'color 0.3s',
         textDecoration: 'none',
         fontWeight: 'bold',
@@ -76,7 +76,7 @@ const Cards2 = () => {
         fontSize: '1.5rem',
         fontWeight: 'bold',
         color: theme === 'light' ? 'rgb(51, 51, 51)' : '#F5F5F5',
-        textShadow: '1.5px 0px 0px #79A158',
+        textShadow: '1.5px 0px 0px rgba(74, 187, 133, 0.7)',
     };
 
     const firstCardStyle = {

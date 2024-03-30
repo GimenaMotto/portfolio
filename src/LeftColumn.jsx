@@ -25,6 +25,7 @@ const LeftColumn = ({ setShowProjects, setShowSketches, setShowApplications }) =
     return (
         <div>
             <h1 className="name-text custom-margin-top">Gimena Motto</h1>
+
             <div className="menu-text">
                 <p onClick={handleProjectsClick} className="menu-link">__PROYECTOS WEB</p>
                 <p onClick={handleApplicationsClick} className="menu-link">__APLICACIONES ESCRITORIO</p>

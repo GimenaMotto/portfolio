@@ -43,7 +43,7 @@ const Cards = () => {
     const cardStyle = {
         backgroundColor: theme === 'light' ? '#F5F5F5' : 'rgb(51, 51, 51)',
         color: theme === 'light' ? 'rgb(51, 51, 51)' : '#F5F5F5',
-        border: theme === 'light' ? '1px solid rgba(88, 100, 161, 0.2)' : '1px solid rgba(245, 245, 245, 0.2)',
+        border: theme === 'light' ? '1px solid rgba(51, 51, 51, 0.2)' : '1px solid rgba(245, 245, 245, 0.2)',
         width: '40rem',
     };
 
@@ -56,14 +56,14 @@ const Cards = () => {
         fontSize: '0.8rem',
         fontWeight: 'bold',
         filter: 'brightness(90%)',
-        border: '2px solid #79A158',
+        border: '2px solid #4ABB85',
 
     };
 
 
 
     const webAndRepoStyle = {
-        color: isWebButtonHovered || isRepoButtonHovered ? '#C5656F' : 'rgba(197, 101, 111, 1)',
+        color: isWebButtonHovered || isRepoButtonHovered ? 'rgba(74, 187, 133, 1)' : 'rgba(74, 187, 133, 1)',
         transition: 'color 0.3s',
         textDecoration: 'none',
         fontWeight: 'bold',
@@ -75,7 +75,7 @@ const Cards = () => {
         fontSize: '1.5rem',
         fontWeight: 'bold',
         color: theme === 'light' ? 'rgb(51, 51, 51)' : '#F5F5F5',
-        textShadow: '1.5px 0px 0px #79A158',
+        textShadow: '1.5px 0px 0px rgba(74, 187, 133, 0.7)',
     };
 
     const firstCardStyle = {

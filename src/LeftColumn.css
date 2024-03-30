@@ -6,17 +6,18 @@
 .name-text {
     font-family: 'Lato Black', sans-serif;
     font-weight: bold;
-    font-size: 2.2em;
+    font-size: 2.5em;
     letter-spacing: 1px;
     margin-bottom: 70px;
-    text-shadow: 2px 0px 0px rgba(51, 51, 51, 0.6);
-    color: rgba(197, 101, 111, 1);
+    text-shadow: 2px 0px 0px rgba(74, 187, 133, 1);
+    color: rgba(51, 51, 51, 1);
+    /* color: rgba(74, 187, 133, 1); */
 }
 
 .menu-text {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 .icon-container {
@@ -63,6 +64,7 @@
 }
 
 .portfolio.dark .name-text {
-    text-shadow: 2px 0px 0px rgba(255, 255, 255, 0.6);
+    text-shadow: 2px 0px 0px rgba(74, 187, 133, 1);
+    color: rgba(255, 255, 255, 0.8);
 
 }
