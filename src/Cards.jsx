@@ -41,15 +41,15 @@ const Cards = () => {
 
 
     const cardStyle = {
-        backgroundColor: theme === 'light' ? '#F5F5F5' : '#3161A3',
-        color: theme === 'light' ? '#3161A3' : '#F5F5F5',
+        backgroundColor: theme === 'light' ? '#F5F5F5' : 'rgb(51, 51, 51)',
+        color: theme === 'light' ? 'rgb(51, 51, 51)' : '#F5F5F5',
         border: theme === 'light' ? '1px solid rgba(88, 100, 161, 0.2)' : '1px solid rgba(245, 245, 245, 0.2)',
         width: '40rem',
     };
 
 
     const badgeStyle = {
-        color: theme === 'light' ? '#3161A3' : '#F5F5F5',
+        color: theme === 'light' ? 'rgb(51, 51, 51)' : '#F5F5F5',
         padding: '0.10rem 0.3rem',
         borderRadius: '0.25rem',
         marginRight: '0.5rem',
@@ -74,7 +74,7 @@ const Cards = () => {
     const cardTitleStyle = {
         fontSize: '1.5rem',
         fontWeight: 'bold',
-        color: theme === 'light' ? '#3161A3' : '#F5F5F5',
+        color: theme === 'light' ? 'rgb(51, 51, 51)' : '#F5F5F5',
         textShadow: '1.5px 0px 0px #79A158',
     };
 
