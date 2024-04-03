@@ -4,18 +4,17 @@
 }
 
 .name-text {
-    font-family: 'Lato Black', sans-serif;
+    font-family: 'Power Grotesk', sans-serif;
     font-weight: bold;
-    font-size: 2.5em;
-    letter-spacing: 1px;
+    font-size: 3em;
+    letter-spacing: 1.5px;
     margin-bottom: 70px;
-    text-shadow: 2px 0px 0px rgba(74, 187, 133, 1);
-    color: rgba(51, 51, 51, 1);
-    /* color: rgba(74, 187, 133, 1); */
+    color: rgba(74, 187, 133, 1);
 }
 
 .menu-text {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Power Grotesk', sans-serif;
+    letter-spacing: 1.2px;
     font-weight: 700;
     font-size: 1.1em;
 }
@@ -23,7 +22,6 @@
 .icon-container {
     display: flex;
 }
-
 
 .portfolio.dark .icon {
     color: rgba(255, 255, 255, 0.8);
@@ -51,20 +49,68 @@
     margin-bottom: 20px;
     text-decoration: none;
     transition: transform 0.1s;
+    position: relative;
 }
 
-.menu-link:hover {
+.menu-link:not(.active):hover {
+    /* Aplica el efecto hover solo a los enlaces que no tienen la clase 'active' */
     text-decoration: none;
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
+.menu-link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: rgba(226, 113, 113, 1);
+    transition: width 0.3s ease;
+}
+
+.menu-link:hover::before {
+    width: 100%;
+}
 
 .portfolio.dark .menu-link {
     color: #F5F5F5;
 }
 
-.portfolio.dark .name-text {
-    text-shadow: 2px 0px 0px rgba(74, 187, 133, 1);
-    color: rgba(255, 255, 255, 0.8);
+/* Animación de cambio de color al hacer clic */
+@keyframes colorChange {
+    from {
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(255, 120, 120, 1);
+    }
 
+    to {
+        color: rgba(255, 120, 120, 1);
+        -webkit-text-stroke: 1px transparent;
+    }
+}
+
+.menu-link.active {
+    animation: colorChange 0.5s forwards;
+    /* Aplica la animación al color del texto */
+}
+
+/* Estilos para cuando el enlace está activo y ha sido clicado */
+.menu-link.active.clicked {
+    color: rgba(255, 120, 120, 1);
+    /* Color de texto para la sección activa */
+    -webkit-text-stroke: 1px transparent;
+    /* Contorno transparente */
+    animation: none;
+    /* Elimina la animación del color */
+}
+
+.menu-link.active.clicked::before {
+    width: 0;
+    /* Anula la línea al principio */
+}
+
+.menu-link.active {
+    font-size: 1.1em;
+    /* Ajusta el tamaño del texto cuando está seleccionado */
 }

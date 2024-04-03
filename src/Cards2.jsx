@@ -60,11 +60,11 @@ const Cards2 = () => {
 
 
 
-    const [isWebButtonHovered, setIsWebButtonHovered] = useState(false);
+    // const [isWebButtonHovered, setIsWebButtonHovered] = useState(false);
     const [isRepoButtonHovered, setIsRepoButtonHovered] = useState(false);
 
     const webAndRepoStyle = {
-        color: isWebButtonHovered || isRepoButtonHovered ? 'rgba(74, 187, 133, 1)' : 'rgba(74, 187, 133, 1)',
+        color: isRepoButtonHovered ? 'rgba(255, 120, 120, 1)' : 'rgba(226, 113, 113, 1)',
         transition: 'color 0.3s',
         textDecoration: 'none',
         fontWeight: 'bold',
@@ -73,10 +73,10 @@ const Cards2 = () => {
 
 
     const cardTitleStyle = {
-        fontSize: '1.5rem',
+        fontSize: '1.2rem',
         fontWeight: 'bold',
         color: theme === 'light' ? 'rgb(51, 51, 51)' : '#F5F5F5',
-        textShadow: '1.5px 0px 0px rgba(74, 187, 133, 0.7)',
+
     };
 
     const firstCardStyle = {
@@ -88,7 +88,7 @@ const Cards2 = () => {
         display: 'block',
         margin: '1rem auto',
         maxHeight: '18rem',
-        width: '90%',
+        width: '70%',
         objectFit: 'cover',
     };
 
@@ -109,7 +109,7 @@ const Cards2 = () => {
             <div style={containerStyle}>
 
                 <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                    <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>App facturación</h5>
+                    <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>APP FACTURACIÓN</h5>
 
                     <Carousel interval={null} indicators={false}>
                         <Carousel.Item>
@@ -163,7 +163,7 @@ const Cards2 = () => {
                 </Card>
 
                 <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                    <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>App diplomas y certificados</h5>
+                    <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>APP DIPLOMAS Y CERTIFICADOS</h5>
                     <Carousel interval={null} indicators={false}>
                         <Carousel.Item>
                             <img

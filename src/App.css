@@ -1,0 +1,26 @@
+/* App.css */
+@font-face {
+    font-family: 'Power Grotesk';
+    src: url('./fonts/PowerGrotesk-Regular.otf') format('opentype');
+}
+
+body {
+    font-family: 'Power Grotesk', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    /* Barra más delgada */
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(240, 240, 240, 0.1);
+    /* Fondo casi transparente */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(240, 240, 240, 0.3);
+    /* Color de la barra */
+    border-radius: 4px;
+    /* Bordes redondeados */
+}

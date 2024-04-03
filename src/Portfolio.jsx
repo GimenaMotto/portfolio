@@ -9,13 +9,27 @@ const Portfolio = () => {
     const [showProjects, setShowProjects] = useState(false);
     const [showSketches, setShowSketches] = useState(false);
     const [showApplications, setShowApplications] = useState(false);
+    const [isMouseOver, setIsMouseOver] = useState(false);
 
     const { toggleTheme, theme } = useTheme();
 
     return (
         <div className={`portfolio ${theme}`}>
-            <button onClick={toggleTheme} className="theme-button">
-                {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+            <button
+                onClick={toggleTheme}
+                className="theme-button"
+                onMouseEnter={() => setIsMouseOver(true)}
+                onMouseLeave={() => setIsMouseOver(false)}
+            >
+                {theme === 'light' ? (
+                    <>
+                        {isMouseOver ? <span style={{ marginLeft: '5px', fontSize: '14px' }}>Dark theme</span> : <Moon size={20} />} {/* Renderizar texto o ícono basado en el estado */}
+                    </>
+                ) : (
+                    <>
+                        {isMouseOver ? <span style={{ marginLeft: '5px', fontSize: '14px' }}>Light theme</span> : <Sun size={20} />} {/* Renderizar texto o ícono basado en el estado */}
+                    </>
+                )}
             </button>
 
             <div className="left-column">
@@ -29,4 +43,3 @@ const Portfolio = () => {
 }
 
 export default Portfolio;
-

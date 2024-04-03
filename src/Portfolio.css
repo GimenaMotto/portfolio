@@ -5,7 +5,9 @@
     overflow: hidden;
     background-color: #F5F5F5;
     color: rgb(51, 51, 51);
-    font-family: 'Lato', sans-serif;
+    font-family: 'Power Grotesk', sans-serif;
+    letter-spacing: 1.2px;
+
 }
 
 .left-column {

@@ -7,7 +7,7 @@ import silviAn from './videos/silviAn.mp4'
 import { useTheme } from './useTheme';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt, faCode } from '@fortawesome/free-solid-svg-icons';
-
+import './Cards.css';
 
 const Cards = () => {
 
@@ -38,6 +38,7 @@ const Cards = () => {
 
     const [isWebButtonHovered, setIsWebButtonHovered] = useState(false);
     const [isRepoButtonHovered, setIsRepoButtonHovered] = useState(false);
+    const [isRepo2ButtonHovered, setIsRepo2ButtonHovered] = useState(false);
 
 
     const cardStyle = {
@@ -62,20 +63,19 @@ const Cards = () => {
 
 
 
-    const webAndRepoStyle = {
-        color: isWebButtonHovered || isRepoButtonHovered ? 'rgba(74, 187, 133, 1)' : 'rgba(74, 187, 133, 1)',
+    const sharedButtonStyle = {
+        color: 'rgba(226, 113, 113, 1)',
         transition: 'color 0.3s',
         textDecoration: 'none',
         fontWeight: 'bold',
 
     };
 
-
     const cardTitleStyle = {
-        fontSize: '1.5rem',
+        fontSize: '1.2rem',
         fontWeight: 'bold',
         color: theme === 'light' ? 'rgb(51, 51, 51)' : '#F5F5F5',
-        textShadow: '1.5px 0px 0px rgba(74, 187, 133, 0.7)',
+
     };
 
     const firstCardStyle = {
@@ -88,16 +88,77 @@ const Cards = () => {
         display: 'block',
         margin: '1rem auto',
         maxHeight: '18rem',
-        width: '75%',
+        width: '57%',
         objectFit: 'cover',
     };
 
     return (
         videosLoaded && (
             <div>
-                <Card className="mb-3 mx-auto" style={firstCardStyle}>
-                    <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Interfaz SPA con fotografías</h5>
-                    <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }}>
+                <Card className="mb-3 mt-5 mx-auto card" style={firstCardStyle} >
+                    <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>WIKI RICK AND MORTY</h5>
+                    <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }} disableRemotePlayback>
+                        <source src={videorick} type="video/mp4" />
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                    <Card.Body>
+
+                        <div className="d-flex flex-wrap justify-content-center text-center" style={{ margin: '0 4.5rem' }}>
+                            <span style={badgeStyle}>HTML</span>
+                            <span style={badgeStyle}>CSS</span>
+                            <span style={badgeStyle}>JavaScript</span>
+                            <span style={badgeStyle}>MongoDB</span>
+                            <span style={badgeStyle}>Mongoose</span>
+                            <span style={{ ...badgeStyle, marginTop: '8px' }}>ExpressJS</span>
+                            <span style={{ ...badgeStyle, marginTop: '8px' }}>Nodemailer</span>
+                            <span style={{ ...badgeStyle, marginTop: '8px' }}>Cloudinary</span>
+                            <span style={{ ...badgeStyle, marginTop: '8px' }}>API Google</span>
+                        </div>
+
+
+                        <Card.Text className="mt-3 mx-5">
+                            Red social con funciones de registro, inicio, cierre de sesión y autorización.<br />
+                            Aplicación CRUD.<br />
+                            Integración de Google Maps. <br />
+                            Validación de Backend y manejo de errores. Trabajamos con la siguiente API: https://rickandmortyapi.com/<br />
+                            Desarrollado junto a Iván Pereiro.<br />
+
+                        </Card.Text>
+                        <div className="d-flex justify-content-center">
+                            <a
+                                href="https://rick-and-morty-project.fly.dev/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="me-4 custom-icon-link"
+                                style={isWebButtonHovered ? { ...sharedButtonStyle, color: 'rgba(255, 120, 120, 1)' } : sharedButtonStyle}
+                                onMouseEnter={() => setIsWebButtonHovered(true)}
+                                onMouseLeave={() => setIsWebButtonHovered(false)}
+
+                            >
+                                <FontAwesomeIcon icon={faExternalLinkAlt} size="sm" />
+                                <span className="ms-2">Web</span>
+                            </a>
+                            <a
+                                href="https://github.com/ivanpereariza/backend-project"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="me-4 custom-icon-link"
+                                style={isRepoButtonHovered ? { ...sharedButtonStyle, color: 'rgba(255, 120, 120, 1)' } : sharedButtonStyle}
+                                onMouseEnter={() => setIsRepoButtonHovered(true)}
+                                onMouseLeave={() => setIsRepoButtonHovered(false)}
+                            >
+                                <FontAwesomeIcon icon={faCode} size="sm" />
+                                <span className="ms-2">Repo GitHub</span>
+                            </a>
+
+                        </div>
+
+                    </Card.Body>
+                </Card>
+
+                <Card className="mb-3 mx-auto card" style={{ ...cardStyle }}>
+                    <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>INTERFAZ SPA FOTOGRAFÍAS</h5>
+                    <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }} disableRemotePlayback  >
                         <source src={silviAn} type="video/mp4" />
                         Tu navegador no soporta el elemento de video.
                     </video>
@@ -122,7 +183,7 @@ const Cards = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="me-4 custom-icon-link"
-                                style={webAndRepoStyle}
+                                style={isWebButtonHovered ? { ...sharedButtonStyle, color: 'rgba(255, 120, 120, 1)' } : sharedButtonStyle}
                                 onMouseEnter={() => setIsWebButtonHovered(true)}
                                 onMouseLeave={() => setIsWebButtonHovered(false)}
                             >
@@ -134,7 +195,7 @@ const Cards = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="me-4 custom-icon-link"
-                                style={webAndRepoStyle}
+                                style={isRepoButtonHovered ? { ...sharedButtonStyle, color: 'rgba(255, 120, 120, 1)' } : sharedButtonStyle}
                                 onMouseEnter={() => setIsRepoButtonHovered(true)}
                                 onMouseLeave={() => setIsRepoButtonHovered(false)}
                             >
@@ -146,9 +207,9 @@ const Cards = () => {
                     </Card.Body>
                 </Card>
 
-                <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                    <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Red social viajes</h5>
-                    <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }}>
+                <Card className="mb-3 mt-5 mx-auto card" style={{ ...cardStyle }}>
+                    <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>RED SOCIAL VIAJES</h5>
+                    <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }} disableRemotePlayback>
                         <source src={video360} type="video/mp4" />
                         Tu navegador no soporta el elemento de video.
                     </video>
@@ -180,9 +241,10 @@ const Cards = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="me-4 custom-icon-link"
-                                style={webAndRepoStyle}
+                                style={isWebButtonHovered ? { ...sharedButtonStyle, color: 'rgba(255, 120, 120, 1)' } : sharedButtonStyle}
                                 onMouseEnter={() => setIsWebButtonHovered(true)}
                                 onMouseLeave={() => setIsWebButtonHovered(false)}
+
                             >
                                 <FontAwesomeIcon icon={faExternalLinkAlt} size="sm" />
                                 <span className="ms-2">Web</span>
@@ -192,7 +254,7 @@ const Cards = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="me-4 custom-icon-link"
-                                style={webAndRepoStyle}
+                                style={isRepoButtonHovered ? { ...sharedButtonStyle, color: 'rgba(255, 120, 120, 1)' } : sharedButtonStyle}
                                 onMouseEnter={() => setIsRepoButtonHovered(true)}
                                 onMouseLeave={() => setIsRepoButtonHovered(false)}
                             >
@@ -204,9 +266,9 @@ const Cards = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="me-4 custom-icon-link"
-                                style={webAndRepoStyle}
-                                onMouseEnter={() => setIsRepoButtonHovered(true)}
-                                onMouseLeave={() => setIsRepoButtonHovered(false)}
+                                style={isRepo2ButtonHovered ? { ...sharedButtonStyle, color: 'rgba(255, 120, 120, 1)' } : sharedButtonStyle}
+                                onMouseEnter={() => setIsRepo2ButtonHovered(true)}
+                                onMouseLeave={() => setIsRepo2ButtonHovered(false)}
                             >
                                 <FontAwesomeIcon icon={faCode} size="sm" />
                                 <span className="ms-2">Repo GitHub server</span>
@@ -215,71 +277,12 @@ const Cards = () => {
 
                     </Card.Body>
                 </Card>
-                <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                    <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Wiki Rick and Morty</h5>
-                    <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }}>
-                        <source src={videorick} type="video/mp4" />
-                        Tu navegador no soporta el elemento de video.
-                    </video>
-                    <Card.Body>
-
-                        <div className="d-flex flex-wrap justify-content-center text-center" style={{ margin: '0 4.5rem' }}>
-                            <span style={badgeStyle}>HTML</span>
-                            <span style={badgeStyle}>CSS</span>
-                            <span style={badgeStyle}>JavaScript</span>
-                            <span style={badgeStyle}>MongoDB</span>
-                            <span style={badgeStyle}>Mongoose</span>
-                            <span style={badgeStyle}>ExpressJS</span>
-                            <span style={{ ...badgeStyle, marginTop: '8px' }}>Nodemailer</span>
-                            <span style={{ ...badgeStyle, marginTop: '8px' }}>Cloudinary</span>
-                            <span style={{ ...badgeStyle, marginTop: '8px' }}>API Google</span>
-                        </div>
-
-
-                        <Card.Text className="mt-3 mx-5">
-                            Red social con funciones de registro, inicio, cierre de sesión y autorización.<br />
-                            Aplicación CRUD.<br />
-                            Integración de Google Maps. <br />
-                            Validación de Backend y manejo de errores. Trabajamos con la siguiente API: https://rickandmortyapi.com/<br />
-                            Desarrollado junto a Iván Pereiro.<br />
-
-                        </Card.Text>
-                        <div className="d-flex justify-content-center">
-                            <a
-                                href="https://rick-and-morty-project.fly.dev/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="me-4 custom-icon-link"
-                                style={webAndRepoStyle}
-                                onMouseEnter={() => setIsWebButtonHovered(true)}
-                                onMouseLeave={() => setIsWebButtonHovered(false)}
-                            >
-                                <FontAwesomeIcon icon={faExternalLinkAlt} size="sm" />
-                                <span className="ms-2">Web</span>
-                            </a>
-                            <a
-                                href="https://github.com/ivanpereariza/backend-project"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="me-4 custom-icon-link"
-                                style={webAndRepoStyle}
-                                onMouseEnter={() => setIsRepoButtonHovered(true)}
-                                onMouseLeave={() => setIsRepoButtonHovered(false)}
-                            >
-                                <FontAwesomeIcon icon={faCode} size="sm" />
-                                <span className="ms-2">Repo GitHub</span>
-                            </a>
-
-                        </div>
-
-                    </Card.Body>
-                </Card>
 
 
 
 
-                <Card className="mb-3 mt-5 mx-auto" style={{ ...cardStyle }}>
-                    <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>Videojuego</h5>
+                <Card className="mb-3 mt-5 mx-auto card" style={{ ...cardStyle }}>
+                    <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>VIDEOJUEGO</h5>
                     <img
                         src={rater}
                         alt="Videojuego img"
@@ -304,7 +307,7 @@ const Cards = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="me-4 custom-icon-link"
-                                style={webAndRepoStyle}
+                                style={isWebButtonHovered ? { ...sharedButtonStyle, color: 'rgba(255, 120, 120, 1)' } : sharedButtonStyle}
                                 onMouseEnter={() => setIsWebButtonHovered(true)}
                                 onMouseLeave={() => setIsWebButtonHovered(false)}
                             >
@@ -316,7 +319,7 @@ const Cards = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="me-4 custom-icon-link"
-                                style={webAndRepoStyle}
+                                style={isRepoButtonHovered ? { ...sharedButtonStyle, color: 'rgba(255, 120, 120, 1)' } : sharedButtonStyle}
                                 onMouseEnter={() => setIsRepoButtonHovered(true)}
                                 onMouseLeave={() => setIsRepoButtonHovered(false)}
                             >
