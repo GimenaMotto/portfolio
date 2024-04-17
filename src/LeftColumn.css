@@ -8,8 +8,14 @@
     font-weight: bold;
     font-size: 3em;
     letter-spacing: 1.5px;
-    margin-bottom: 70px;
+
     color: rgba(74, 187, 133, 1);
+}
+
+.developer {
+    color: rgba(74, 187, 133, 1);
+    font-size: 1em;
+    margin-bottom: 70px;
 }
 
 .menu-text {
@@ -113,4 +119,9 @@
 .menu-link.active {
     font-size: 1.1em;
     /* Ajusta el tamaño del texto cuando está seleccionado */
+}
+
+.name-text {
+    cursor: pointer;
+    /* Otros estilos */
 }

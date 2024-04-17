@@ -1,0 +1,12 @@
+.link {
+    text-decoration: none !important;
+    color: rgba(245, 245, 245, 0.8);
+    /* Color con transparencia */
+    margin-top: 100px;
+    /* Margen superior */
+}
+
+.link:hover {
+    color: rgba(255, 120, 120, 0.8);
+    /* Color al pasar el cursor */
+}

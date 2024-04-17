@@ -95,7 +95,7 @@ const Cards = () => {
     return (
         videosLoaded && (
             <div>
-                <Card className="mb-3 mt-5 mx-auto card" style={firstCardStyle} >
+                <Card className="mb-3 mt-5 mx-auto card " style={firstCardStyle} >
                     <h5 className="text-center mb-1 mt-3" style={cardTitleStyle}>WIKI RICK AND MORTY</h5>
                     <video autoPlay loop className="p-3" style={{ maxHeight: '15rem', width: '100%' }} disableRemotePlayback>
                         <source src={videorick} type="video/mp4" />

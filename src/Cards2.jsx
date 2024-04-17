@@ -95,7 +95,7 @@ const Cards2 = () => {
     const imageStyle2 = {
         display: 'block',
         margin: '1rem auto',
-        maxWidth: '100%',
+        maxWidth: '80%',
         maxHeight: '18rem',
         objectFit: 'cover',
     };

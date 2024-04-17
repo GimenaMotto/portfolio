@@ -2,14 +2,3 @@
 .carousel-control-prev-icon {
     filter: invert(70%);
 }
-
-/* CSS */
-.card:hover img {
-    transform: scale(1.1);
-    /* Aumenta el tamaño al 110% en hover */
-}
-
-/* También puedes agregar una transición suave para suavizar el efecto */
-.card img {
-    transition: transform 0.3s ease;
-}
