@@ -19,6 +19,7 @@ const Portfolio = () => {
     const handleNameClick = () => {
         setShowDescription(true); // Mostrar la descripción cuando se hace clic en tu nombre
         setFastAnimation(true); // Establecer si la animación debe ser rápida o no
+        console.log('fastAnimation después de hacer clic en el nombre:', fastAnimation); // Agregar un console.log para verificar el cambio en fastAnimation
     };
 
     return (

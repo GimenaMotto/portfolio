@@ -40,6 +40,7 @@ const LeftColumn = ({ setShowProjects, setShowSketches, setShowApplications, set
         setShowProjects(false);
         setShowSketches(false);
         setShowApplications(false);
+
     };
 
 

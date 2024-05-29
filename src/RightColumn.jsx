@@ -4,12 +4,12 @@ import Cards from './Cards';
 import Cards2 from './Cards2';
 import Description from './Description'; // Importa el componente Description
 
-const RightColumn = ({ showProjects, showSketches, showApplications, showDescription }) => {
+const RightColumn = ({ showProjects, showSketches, showApplications, showDescription, fastAnimation }) => {
     return (
         <div>
             {showDescription && (
                 <div>
-                    <Description />
+                    <Description fastAnimation={fastAnimation} />
                 </div>
             )} {/* Renderiza la descripción si showDescription es true */}
             {showProjects && (
