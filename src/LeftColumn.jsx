@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './LeftColumn.css'; // Importa tu archivo CSS
+import './LeftColumn.css';
 import { Github, Envelope, Linkedin } from 'react-bootstrap-icons';
 import { motion } from 'framer-motion';
 
-const LeftColumn = ({ setShowProjects, setShowSketches, setShowApplications, setShowDescription }) => {
+const LeftColumn = ({ setShowProjects, setShowSketches, setShowApplications, setShowDescription, setFastAnimation }) => {
     const [activeSection, setActiveSection] = useState(null);
     const [clickedSection, setClickedSection] = useState(null);
 
@@ -11,31 +11,32 @@ const LeftColumn = ({ setShowProjects, setShowSketches, setShowApplications, set
         setShowProjects(true);
         setShowSketches(false);
         setShowApplications(false);
-        setShowDescription(false); // Establece showDescription como false
-        setActiveSection('projects'); // Establece la sección activa como 'projects'
-        setClickedSection('projects'); // Marca la sección como clicada
+        setShowDescription(false);
+        setActiveSection('projects');
+        setClickedSection('projects');
     };
 
     const handleSketchesClick = () => {
         setShowProjects(false);
         setShowSketches(true);
         setShowApplications(false);
-        setShowDescription(false); // Establece showDescription como false
-        setActiveSection('sketches'); // Establece la sección activa como 'sketches'
-        setClickedSection('sketches'); // Marca la sección como clicada
+        setShowDescription(false);
+        setActiveSection('sketches');
+        setClickedSection('sketches');
     };
 
     const handleApplicationsClick = () => {
         setShowProjects(false);
         setShowSketches(false);
         setShowApplications(true);
-        setShowDescription(false); // Establece showDescription como false
-        setActiveSection('applications'); // Establece la sección activa como 'applications'
-        setClickedSection('applications'); // Marca la sección como clicada
+        setShowDescription(false);
+        setActiveSection('applications');
+        setClickedSection('applications');
     };
 
     const handleNameClick = () => {
-        setShowDescription(true); // Mostrar la descripción cuando se hace clic en tu nombre
+        setShowDescription(true);
+        setFastAnimation(true); // Aquí establecemos fastAnimation como verdadero
         setShowProjects(false);
         setShowSketches(false);
         setShowApplications(false);
@@ -44,7 +45,6 @@ const LeftColumn = ({ setShowProjects, setShowSketches, setShowApplications, set
 
     return (
         <div>
-
             <motion.h1
                 onClick={handleNameClick}
                 className="name-text custom-margin-top"
@@ -63,8 +63,6 @@ const LeftColumn = ({ setShowProjects, setShowSketches, setShowApplications, set
             >
                 DESARROLLADORA WEB FULL STACK
             </motion.h1>
-
-
             <div className="menu-text">
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
